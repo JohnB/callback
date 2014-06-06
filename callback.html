@@ -1,0 +1,12 @@
+<head>
+  <title>callback</title>
+</head>
+
+<template name="callbacks">
+  <h1>The Last {{callback_count}} Requests:</h1>
+  <ul>
+    {{#each callbacks}}
+      <li><b>{{time}}</b> {{url}}</li>
+    {{/each}}
+  </ul>
+</template>

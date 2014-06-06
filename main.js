@@ -19,11 +19,7 @@ Router.map(function() {
                   + dd(currentdate.getHours()) + ":"
                   + dd(currentdate.getMinutes()) + ":"
                   + dd(currentdate.getSeconds());
-      console.log("in router: "+this.params);
       Requests.insert({url: document.location.href, time: datetime});
-    },
-    data: function() {
-      return Requests.find({}, {sort: {time: "desc"}});
     }
   });
 });
